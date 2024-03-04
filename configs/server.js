@@ -1,17 +1,23 @@
-'use strict';
-
 import express from 'express';
+import cors from 'cors'
+import helmet from 'helmet';
+import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
-
+import administradorRoutes from '../src/administradores/administrador.routes.js';
+//import clienteRoutes from '../src/cliente/cliente.routes.js';
+//import empresaRoutes from '../src/empresa/empresa.routes.js';
 
 class Server {
     constructor() {
         this.app = express();
         this.port = process.env.PORT;
-
-
-  
+        this.adminPath = '/gestorEmpresa/v1/admin';
+        this.clientePath = '/gestorEmpresa/v1/cliente1';
+        this.empresaPath = '/gestorEmpresa/v1/empresa';
         this.conectarDB(); 
+        this.middlewares();
+        this.routes();
+        global.sesion = "";
     }
 
     async conectarDB() {
@@ -29,7 +35,9 @@ class Server {
 
    
     routes() {
-        
+        this.app.use(this.adminPath, administradorRoutes);
+        //this.app.use(this.clientePath, clienteRoutes);
+        //this.app.use(this.empresaPath, empresaRoutes);
     }
 
     listen() {

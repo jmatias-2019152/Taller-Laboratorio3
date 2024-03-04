@@ -16,6 +16,10 @@ const AdminSchema = Schema({
     rol: {
         type: String,
         default: 'ADMIN',
+    },
+    estado: {
+        type: Boolean,
+        default: true
     }
 }, {
     versionKey: false 
