@@ -1,6 +1,6 @@
-import { Schema, model } from "mongoose";
+import mongoose from "mongoose";
 
-const AdminSchema = Schema({
+const AdminSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -24,4 +24,4 @@ const AdminSchema = Schema({
 }, {
     versionKey: false 
 });
-export default model('Admin', AdminSchema);
+export default mongoose.model('Admin', AdminSchema);

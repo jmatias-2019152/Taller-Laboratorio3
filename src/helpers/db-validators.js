@@ -1,7 +1,5 @@
-import Admin from "../administradores/administrador.model.js";
-
-export const existeEmail = async (correo = '') => {
-    const existeEmail = await Admin.findOne({ correo });
+export const existeEmail = async (correo = '', modelo) => {
+    const existeEmail = await modelo.findOne({ correo });
     if (existeEmail) {
         throw new Error(`El email ${correo} ya fue registrado`);
     }
