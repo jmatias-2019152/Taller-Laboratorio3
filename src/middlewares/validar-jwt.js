@@ -8,8 +8,8 @@ export const validarJWT = async (req, res, next) => {
     const token = global.tokenAcces;
     if (!token) {
         return res.status(401).json({
-            msg: "No hay token en la petición",
-        });
+            msg: "Iniciar sesion para poder continuar con esta funcion"
+        })
     }
 
     try {
