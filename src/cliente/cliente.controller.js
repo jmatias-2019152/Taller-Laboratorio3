@@ -1,6 +1,4 @@
 import Cliente from "./cliente.model.js";
-import bcrypt from "bcryptjs";
-import jwt from 'jsonwebtoken';
 
 
 export const clientePost = async (req, res) => {

@@ -1,0 +1,286 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Empresas",
+    "dateExported": "2024-03-04T05:54:28.586Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "e250ed75-7ce5-4f53-8950-1e70c27132d1",
+            "name": "Login",
+            "containerId": "",
+            "created": "2024-03-04T01:21:46.502Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "e188b5f4-e686-4b06-a0e0-16b0a419a355",
+            "name": "Empresa",
+            "containerId": "",
+            "created": "2024-03-04T01:22:33.173Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "41332510-3226-49c7-89b8-9610fa4fea42",
+            "name": "Cliente",
+            "containerId": "",
+            "created": "2024-03-04T01:22:55.654Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "e4d50bcc-709c-4cd5-acbf-8834ab3689ae",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "e250ed75-7ce5-4f53-8950-1e70c27132d1",
+            "name": "register",
+            "url": "http://localhost:3000/gestorEmpresa/v1/admin/register",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-04T00:45:02.221Z",
+            "modified": "2024-03-04T03:16:46.526Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"marvin\",\n  \"correo\": \"marglin1@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f5e8d774-9ce9-4f90-b09d-34c5c02304f8",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "41332510-3226-49c7-89b8-9610fa4fea42",
+            "name": "postCliente",
+            "url": "http://localhost:3000/gestorEmpresa/v1/cliente/post",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-04T02:08:49.998Z",
+            "modified": "2024-03-04T04:37:28.743Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombres\": \"Jose David\",\n  \"apellidos\": \"Matias Morales\",\n  \"correo\": \"jmatias1222231@gmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "55c00164-3746-4901-b2b8-77eb73f163c1",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "e250ed75-7ce5-4f53-8950-1e70c27132d1",
+            "name": "adminGet",
+            "url": "http://localhost:3000/gestorEmpresa/v1/admin",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-04T00:57:25.143Z",
+            "modified": "2024-03-04T00:57:32.453Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c1f4392a-dfbb-45ee-98a5-d9561903f77a",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "e250ed75-7ce5-4f53-8950-1e70c27132d1",
+            "name": "login",
+            "url": "http://localhost:3000/gestorEmpresa/v1/admin/login",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-03-04T01:27:08.694Z",
+            "modified": "2024-03-04T03:07:26.276Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"correo\": \"marglin@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "93e5b213-b7aa-4259-9abc-519c824fbec7",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "41332510-3226-49c7-89b8-9610fa4fea42",
+            "name": "getClientes",
+            "url": "http://localhost:3000/gestorEmpresa/v1/cliente/get",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-04T01:39:48.045Z",
+            "modified": "2024-03-04T02:34:19.323Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "41104885-cdfb-4183-918a-098e45892d48",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "41332510-3226-49c7-89b8-9610fa4fea42",
+            "name": "deleteCliente",
+            "url": "http://localhost:3000/gestorEmpresa/v1/cliente/delete",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-03-04T02:08:24.845Z",
+            "modified": "2024-03-04T04:56:39.797Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"correo\": \"jmatias1222231@gmail.com\" \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "409419db-09a8-4a2b-aa21-7b0c8b8ec49c",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "41332510-3226-49c7-89b8-9610fa4fea42",
+            "name": "putCliente",
+            "url": "http://localhost:3000/gestorEmpresa/v1/cliente/put",
+            "method": "PUT",
+            "sortNum": 120000,
+            "created": "2024-03-04T02:10:29.324Z",
+            "modified": "2024-03-04T04:52:13.434Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"correo\": \"jmatias1222231@gmail.com\",\n  \"nombres\": \"asdklaksjdlaksmdlajknsd\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "24da7600-a1b1-4634-b0b7-8a70bb979375",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "e188b5f4-e686-4b06-a0e0-16b0a419a355",
+            "name": "empresaGet",
+            "url": "http://localhost:3000/gestorEmpresa/v1/empresa/get",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2024-03-04T05:28:07.232Z",
+            "modified": "2024-03-04T05:30:13.821Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d95f4636-7c50-4f7d-aa95-ae777db4520f",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "e188b5f4-e686-4b06-a0e0-16b0a419a355",
+            "name": "azGet",
+            "url": "http://localhost:3000/gestorEmpresa/v1/empresa/az",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2024-03-04T05:33:35.777Z",
+            "modified": "2024-03-04T05:57:44.306Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6e6d76b1-3c42-4457-8b61-06ac71733e1a",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "e188b5f4-e686-4b06-a0e0-16b0a419a355",
+            "name": "zaGet",
+            "url": "http://localhost:3000/gestorEmpresa/v1/empresa/za",
+            "method": "GET",
+            "sortNum": 150000,
+            "created": "2024-03-04T05:33:43.105Z",
+            "modified": "2024-03-04T06:00:23.016Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b4c68ca2-278a-43ae-b615-23ab2c64f4b5",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "e188b5f4-e686-4b06-a0e0-16b0a419a355",
+            "name": "categoriaGet",
+            "url": "http://localhost:3000/gestorEmpresa/v1/empresa/categoria",
+            "method": "GET",
+            "sortNum": 160000,
+            "created": "2024-03-04T05:33:50.001Z",
+            "modified": "2024-03-04T06:01:26.492Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"impacto\": \"Positivo\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e760a32c-b0a8-424c-9372-ae890531fd31",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "e188b5f4-e686-4b06-a0e0-16b0a419a355",
+            "name": "añosTrayectoriaGet",
+            "url": "http://localhost:3000/gestorEmpresa/v1/empresa/trayectoria",
+            "method": "GET",
+            "sortNum": 170000,
+            "created": "2024-03-04T05:34:45.808Z",
+            "modified": "2024-03-04T06:05:36.619Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"añosDT\": \"4\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a05948d3-8756-4858-9fef-51261f2818db",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "e188b5f4-e686-4b06-a0e0-16b0a419a355",
+            "name": "empresaPost",
+            "url": "http://localhost:3000/gestorEmpresa/v1/empresa/post",
+            "method": "POST",
+            "sortNum": 180000,
+            "created": "2024-03-04T05:35:25.993Z",
+            "modified": "2024-03-04T05:45:29.322Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"c\",\n  \"impacto\": \"continuo\",\n  \"descripcion\": \"Nasdasjnd\",\n  \"añosDT\": \"3445\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "198e1d67-0d0e-4f94-91dd-c0b7c0b285f6",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "e188b5f4-e686-4b06-a0e0-16b0a419a355",
+            "name": "empresaPut",
+            "url": "http://localhost:3000/gestorEmpresa/v1/empresa/put",
+            "method": "PUT",
+            "sortNum": 190000,
+            "created": "2024-03-04T05:35:49.753Z",
+            "modified": "2024-03-04T05:52:26.444Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n  \"nombre\": \"c\",\n  \"añosDT\": \"25\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "68fc4846-6488-4536-99b1-9ffd878c0f08",
+            "colId": "caedcaf9-bebf-4516-819a-d210541e8d15",
+            "containerId": "e188b5f4-e686-4b06-a0e0-16b0a419a355",
+            "name": "empresaExel",
+            "url": "http://localhost:3000/gestorEmpresa/v1/empresa/excel",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2024-03-04T05:49:45.834Z",
+            "modified": "2024-03-04T05:49:59.003Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
