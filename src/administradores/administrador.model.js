@@ -10,7 +10,7 @@ const AdminSchema = Schema({
         required: true
     },
     password: {
-        type: Number,
+        type: String,
         required: true
     },
     rol: {

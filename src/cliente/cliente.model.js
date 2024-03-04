@@ -12,6 +12,10 @@ const clienteSchema = Schema({
     correo: {
         type: Number,
         required: true
+    },
+    estado: {
+        type: Boolean,
+        default: true
     }
 }, {
     versionKey: false 
