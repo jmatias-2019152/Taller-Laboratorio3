@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import administradorRoutes from '../src/administradores/administrador.routes.js';
-//import clienteRoutes from '../src/cliente/cliente.routes.js';
+import clienteRoutes from '../src/cliente/cliente.routes.js';
 //import empresaRoutes from '../src/empresa/empresa.routes.js';
 
 class Server {
@@ -12,7 +12,7 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
         this.adminPath = '/gestorEmpresa/v1/admin';
-        this.clientePath = '/gestorEmpresa/v1/cliente1';
+        this.clientePath = '/gestorEmpresa/v1/cliente';
         this.empresaPath = '/gestorEmpresa/v1/empresa';
         this.conectarDB(); 
         this.middlewares();
@@ -36,7 +36,7 @@ class Server {
    
     routes() {
         this.app.use(this.adminPath, administradorRoutes);
-        //this.app.use(this.clientePath, clienteRoutes);
+        this.app.use(this.clientePath, clienteRoutes);
         //this.app.use(this.empresaPath, empresaRoutes);
     }
 
